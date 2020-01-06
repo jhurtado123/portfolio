@@ -2,26 +2,29 @@
 const headerTitle = document.querySelector('.animated-text');
 const arrayOfCharacters = headerTitle.innerText.split("");
 headerTitle.innerText = "";
-let i = 0;
-let v = 0;
-let intervalLetter = setInterval(() => {
-    if (v % 2 === 0 ) {
-        headerTitle.style.borderRight = "2px solid white";
-    } else {
-        headerTitle.style.borderRight = "0px";
-    }
-    v++;
-},290);
-arrayOfCharacters.forEach(char => {
-    i++;
-    setTimeout(() => {
-        headerTitle.innerHTML += char === '*' ? '&ensp;' : char;
-        if (arrayOfCharacters.indexOf(char)+1 === arrayOfCharacters.length) {
-            clearInterval(intervalLetter);
-            setTimeout(() => {headerTitle.style.borderRight = "0px"}, 200);
+setTimeout( () => {
+    let i = 0;
+    let v = 0;
+    let intervalLetter = setInterval(() => {
+        if (v % 2 === 0 ) {
+            headerTitle.style.borderRight = "2px solid white";
+        } else {
+            headerTitle.style.borderRight = "0px";
         }
-    }, i * 150);
-});
+        v++;
+    },290);
+    arrayOfCharacters.forEach(char => {
+        i++;
+        setTimeout(() => {
+            headerTitle.innerHTML += char === '*' ? '&ensp;' : char;
+            if (arrayOfCharacters.indexOf(char)+1 === arrayOfCharacters.length) {
+                clearInterval(intervalLetter);
+                setTimeout(() => {headerTitle.style.borderRight = "0px"}, 200);
+            }
+        }, i * 150);
+    });
+
+},500);
 
 //appear projects effect
 window.addEventListener('scroll', initProjectAnimation, false);

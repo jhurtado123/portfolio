@@ -26,7 +26,7 @@
 
 .self-presentation .presentation-text h2 {
     color: white;
-    font-size: 52px;
+    font-size: 46px;
     text-transform: uppercase;
     font-family: 'Share Tech Mono', monospace;
     display: inline-block;
@@ -35,7 +35,7 @@
 
 .self-presentation .presentation-text h3 {
     color: #2a363c;
-    font-size: 31px;
+    font-size: 28px;
     display: inline;
     margin: 0 auto;
     padding-right: 3px;
@@ -51,6 +51,15 @@
     box-shadow: 1px 15px 35px 7px rgba(0, 0, 0, 0.75);
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
+}
+.show-on-mobile {
+    display: inline-block;
+    cursor: pointer;
+    color:rgba(255, 133, 124, 1);
+    font-size: 24px;
+}
+.hide-on-modile {
+    display:none;
 }
 .self-presentation .presentation-text .content h4 {
     color:rgba(255, 133, 124, 1);
@@ -173,6 +182,9 @@ section h4.title {
 .habilities .block .cards .card img, .other-habilities .content .card img {
     width: 20%;
 }
+.habilities .block .cards .card img {
+    max-height: 75px;
+}
 .other-habilities .content .card img.special-height {
     height:60px;
 }
@@ -234,10 +246,18 @@ section h4.title {
     .self-presentation {
         padding: 30px;
     }
+    .self-presentation .presentation-text h2 {
+        font-size: 52px;
+    }
+    .self-presentation .presentation-text h3 {
+        font-size: 31px;
+    }
     .section-presentation p {
         text-align: center;
     }
-
+    .habilities .block .cards .card img {
+        max-height: 115px;
+    }
     .self-presentation .presentation-text .content {
         padding: 40px;
     }
@@ -264,7 +284,9 @@ section h4.title {
     .habilities .block > .title {
         margin: 50px auto 20px;
     }
-
+    .habilities .block .cards .card img {
+        max-height: none;
+    }
 
     .habilities .block .cards {
         flex-flow: row wrap;
@@ -312,6 +334,12 @@ section h4.title {
     .habilities .block .cards {
         justify-content: center;
         margin-top: 40px;
+    }
+    .show-on-mobile {
+        display: none;
+    }
+    .hide-on-modile {
+        display: inline-block;
     }
 
     .habilities .block .cards .card {
