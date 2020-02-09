@@ -141,6 +141,12 @@ body {
     width: 100%;
     z-index: 2;
 }
+.my-projects .projects .project .content a {
+    color:#ff837a;
+    display: block;
+    outline: none;
+    margin-top: 20px;
+}
 
 .my-projects .projects .project .content .image img {
     width: 100%;

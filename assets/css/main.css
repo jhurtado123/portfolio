@@ -202,7 +202,7 @@ footer .i-contact-you .form-send-email button {
     margin-left: 10px;
 }
 
-footer .i-contact-you .form-send-email {
+footer .i-contact-you .form-send-email form {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
