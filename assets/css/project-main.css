@@ -162,6 +162,14 @@ body {
     font-size: 18px;
     margin-top:30px;
 }
+.my-projects .projects .project .content .description ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+.my-projects .projects .project .content .description ul li {
+    font-size: 14px;
+    list-style-type: disc;
+}
 
 .my-projects .projects .project .content .description .tags {
     margin-top: 25px;
@@ -175,6 +183,7 @@ body {
     color: #ff837a;
     padding: 8px;
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 @media screen and (min-width: 585px) {
